@@ -20,4 +20,9 @@ public class ShortenerService {
     public void deleteById(Long id){
         shortenerRepository.deleteById(id);
     }
+
+    public  Shortener findByShortnerUrl(String shortnerUrl){
+        Optional<Shortener> result = shortenerRepository.findBy(Shortener,);
+
+    }
 }
