@@ -35,5 +35,51 @@ public class Shortener implements Serializable {
         shortnerUrl = RandomSerial.generate();
     }
 
+    public Long getId() {
+        return id;
+    }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getOriginUrl() {
+        return originUrl;
+    }
+
+    public void setOriginUrl(String originUrl) {
+        this.originUrl = originUrl;
+    }
+
+    public String getShortnerUrl() {
+        return shortnerUrl;
+    }
+
+    public void setShortnerUrl(String shortnerUrl) {
+        this.shortnerUrl = shortnerUrl;
+    }
+
+    public Calendar getOriginDate() {
+        return originDate;
+    }
+
+    public void setOriginDate(Calendar originDate) {
+        this.originDate = originDate;
+    }
+
+    public Calendar getLastAcess() {
+        return lastAcess;
+    }
+
+    public void setLastAcess(Calendar lastAcess) {
+        this.lastAcess = lastAcess;
+    }
+
+    public Calendar getLimitDate() {
+        return limitDate;
+    }
+
+    public void setLimitDate(Calendar limitDate) {
+        this.limitDate = limitDate;
+    }
 }
