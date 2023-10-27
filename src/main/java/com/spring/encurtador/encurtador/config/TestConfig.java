@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @Configuration
 @Profile("test")
@@ -21,7 +22,7 @@ public class TestConfig implements CommandLineRunner {
     public void run(String... args) throws Exception {
     Shortener shortener = new Shortener(null, RandomSerial.generate());
     Shortener shortener2 = new Shortener(null, RandomSerial.generate());
-
+    Shortener shortener1 = shortenerRepository.findByShortnerUrl("dada");
     shortenerRepository.save(shortener);
     shortenerRepository.save(shortener2);
 

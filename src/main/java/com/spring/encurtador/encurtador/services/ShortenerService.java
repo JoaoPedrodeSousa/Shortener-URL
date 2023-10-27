@@ -3,8 +3,11 @@ package com.spring.encurtador.encurtador.services;
 import com.spring.encurtador.encurtador.entities.Shortener;
 import com.spring.encurtador.encurtador.repositories.ShortenerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -21,8 +24,9 @@ public class ShortenerService {
         shortenerRepository.deleteById(id);
     }
 
-    public  Shortener findByShortnerUrl(String shortnerUrl){
-        Optional<Shortener> result = shortenerRepository.findBy(Shortener,);
+    public Shortener findByShortnerUrl(String shortener){
+        Shortener result = shortenerRepository.findByShortnerUrl(shortener);
+        return result;
+    };
 
-    }
 }
